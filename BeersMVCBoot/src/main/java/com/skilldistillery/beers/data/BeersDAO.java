@@ -14,5 +14,7 @@ public interface BeersDAO {
 	
 	public Beers create(Beers beers);
 	
+	public Beers updateBeers(Beers beer);
+	
 
 }

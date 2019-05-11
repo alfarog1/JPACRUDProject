@@ -20,7 +20,6 @@
 
 <body>
 
-
 <c:if test="${empty beerList }">
 <h4>No beers found...</h4>
 </c:if>

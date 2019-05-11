@@ -1,5 +1,6 @@
 package com.skilldistillery.beers.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -82,7 +83,30 @@ public class BeersController {
 		return mv;
 	}
 	
+	// CRUD - UPDATE
+	@RequestMapping(path = "updateBeers.do", method = RequestMethod.POST)
+	public ModelAndView updateBeers(@ModelAttribute("beers")Beers beer) {
+		ModelAndView mv = new ModelAndView();
+		Beers updatedBeers = beersDAO.updateBeers(beer);
+		List<Beers> updatedBeersList = new ArrayList<>();
+		updatedBeersList.add(updatedBeers);
+		for (Beers beers : updatedBeersList) {
+			System.out.println(beers);
+		}
+		mv.addObject("beerList", updatedBeersList);
+		mv.setViewName("WEB-INF/beer/results.jsp");
+		return mv;
+	}
 	
-	
+	// CRUD - UPDATE
+		@RequestMapping(path = "updateBeerView.do", method = RequestMethod.GET)
+		public ModelAndView updateBeerView(int id) {
+			ModelAndView mv = new ModelAndView();
+			System.out.println(id);
+			Beers updateBeer = beersDAO.findById(id);
+			mv.addObject("beers", updateBeer);
+			mv.setViewName("WEB-INF/beer/update.jsp");
+			return mv;
+		}
 
 }

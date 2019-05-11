@@ -56,4 +56,18 @@ public class BeersJpaImpl implements BeersDAO {
 		return beer;
 	}
 
+	@Override
+	public Beers updateBeers(Beers beer) {
+		// retrieve a "managed" beers entity
+		Beers updatedBeers = em.find(Beers.class, beer.getId());
+
+		// update the values of the detached entity
+		updatedBeers.setAbv(beer.getAbv());
+		updatedBeers.setBrewery(beer.getBrewery());
+		updatedBeers.setCountry(beer.getCountry());
+		updatedBeers.setName(beer.getName());
+		updatedBeers.setStyle(beer.getStyle());
+		return updatedBeers;
+	}
+
 }
