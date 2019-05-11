@@ -35,6 +35,8 @@
 
 <a class="btn btn-primary" href="updateBeerView.do?id=${beer.id}" role="button">Update</a>
 
+<a class="btn btn-primary" href="deleteBeer.do?id=${beer.id}" role="button">Delete</a>
+
 	<div>
 
 		<form action="/" method="GET">

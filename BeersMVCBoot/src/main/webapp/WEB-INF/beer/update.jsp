@@ -38,7 +38,7 @@
 		   <table>
 		     <tr>
                <td><label path = "id"> </label></td>
-               <td><form:input type="hidden" path = "id" /></td>
+               <td><form:input type="hidden" path = "id" value="${beer.id }"/></td>
             </tr>
             <tr>
                <td><label path = "name">Beer Name</label></td>
@@ -62,7 +62,7 @@
             </tr>
             <tr>
                <td colspan = "2">
-                  <input type="submit" value="Add Beer" >
+                  <input type="submit" value="Update Beer" >
                </td>
             </tr>
          </table>  

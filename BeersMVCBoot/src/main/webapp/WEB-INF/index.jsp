@@ -16,8 +16,6 @@
     <%@include file="css/style.css" %>
 </style> 
 
-<%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css"> --%>
-
 </head>
 
 <body>
@@ -25,12 +23,6 @@
 	<div id="test_logo"></div>
 	<h1>Find your beer</h1>
 
-	<!-- <form action="getBeers.do" method="GET">
-		Beer ID: <input type="text" name="bId" /> <input type="submit"
-			value="Show Beer" />
-
-	</form>
-	<p> -->
 	<form action="getBeersbyKey.do" method="GET">
 		Search: <input type="text" name="keyword" /> <input type="submit"
 			value="Show Beers" />

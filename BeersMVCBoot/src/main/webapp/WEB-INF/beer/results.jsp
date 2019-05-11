@@ -28,9 +28,13 @@
 		<c:forEach var="beer" items="${beerList }">
 		
 <div>
-  <h4>${beer.name} (${beer.style})</h4>
-  <p><h3>${beer.abv}</h3></p>
-  <p><h2>${beer.brewery}</h2></p>
+ <h1>${beer.name}  (${beer.style})</h1>
+  <p><h2>ABV ${beer.abv}%</h2>
+  <p><h3>Brewery: ${beer.brewery}</h3>
+  <p><h4>Country: ${beer.country}</h4>
+  <a class="btn btn-primary" href="updateBeerView.do?id=${beer.id}" role="button">Update</a>
+
+<a class="btn btn-primary" href="deleteBeer.do?id=${beer.id}" role="button">Delete</a>
 </div>
 <p>
 

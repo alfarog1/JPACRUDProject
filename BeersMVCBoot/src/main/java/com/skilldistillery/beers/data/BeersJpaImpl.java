@@ -69,5 +69,12 @@ public class BeersJpaImpl implements BeersDAO {
 		updatedBeers.setStyle(beer.getStyle());
 		return updatedBeers;
 	}
+	
+	@Override
+	public void breakBeers(int id) {
+		Beers brokenBeer = em.find(Beers.class, id);
+		em.remove(brokenBeer);
+	
+	}
 
 }

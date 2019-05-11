@@ -90,9 +90,7 @@ public class BeersController {
 		Beers updatedBeers = beersDAO.updateBeers(beer);
 		List<Beers> updatedBeersList = new ArrayList<>();
 		updatedBeersList.add(updatedBeers);
-		for (Beers beers : updatedBeersList) {
-			System.out.println(beers);
-		}
+		
 		mv.addObject("beerList", updatedBeersList);
 		mv.setViewName("WEB-INF/beer/results.jsp");
 		return mv;
@@ -108,5 +106,19 @@ public class BeersController {
 			mv.setViewName("WEB-INF/beer/update.jsp");
 			return mv;
 		}
+		
+	// CRUD - DELETE
+		@RequestMapping(path = "deleteBeer.do", method = RequestMethod.GET)
+		public ModelAndView deleteBeer(int id) {
+			ModelAndView mv = new ModelAndView();
+			beersDAO.breakBeers(id);
+			List<Beers> beerList = beersDAO.findAll();
+
+			mv.addObject("beerList", beerList);
+			mv.setViewName("/WEB-INF/index.jsp");
+			
+			return mv;
+		}
+		
 
 }

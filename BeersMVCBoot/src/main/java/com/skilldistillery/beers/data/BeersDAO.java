@@ -16,5 +16,7 @@ public interface BeersDAO {
 	
 	public Beers updateBeers(Beers beer);
 	
+	public void breakBeers(int id);
+	
 
 }
