@@ -49,6 +49,7 @@ public class BeersJpaImpl implements BeersDAO {
 		beer.setCountry(beers.getCountry());
 		beer.setName(beers.getName());
 		beer.setStyle(beers.getStyle());
+		beer.setLogoUrl(beers.getLogoUrl());
 		// write the beer to the database
 		em.persist(beer);
 		// update the "local" beer object
@@ -67,6 +68,7 @@ public class BeersJpaImpl implements BeersDAO {
 		updatedBeers.setCountry(beer.getCountry());
 		updatedBeers.setName(beer.getName());
 		updatedBeers.setStyle(beer.getStyle());
+		updatedBeers.setLogoUrl(beer.getLogoUrl());
 		return updatedBeers;
 	}
 	

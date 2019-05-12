@@ -52,6 +52,8 @@ public class BeersController {
 		ModelAndView mv = new ModelAndView();
 		System.out.println(beer);
 		Beers newbeer = beersDAO.create(beer);
+		System.out.println(newbeer);
+		
 		mv.addObject("beer", newbeer);
 		mv.setViewName("WEB-INF/beer/show.jsp");
 		return mv;

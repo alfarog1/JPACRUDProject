@@ -1,5 +1,6 @@
 package com.skilldistillery.beers.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -12,6 +13,25 @@ public class Beers {
 	private String style;
 	private double abv;
 	private String country;
+	@Column(name = "logo_url")
+	private String logoUrl;
+	
+	public Beers(int id, String name, String brewery, String style, double abv, String country, String logoUrl) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.brewery = brewery;
+		this.style = style;
+		this.abv = abv;
+		this.country = country;
+		this.logoUrl = logoUrl;
+	}
+	public String getLogoUrl() {
+		return logoUrl;
+	}
+	public void setLogoUrl(String logoUrl) {
+		this.logoUrl = logoUrl;
+	}
 	public int getId() {
 		return id;
 	}
@@ -51,16 +71,7 @@ public class Beers {
 	@Override
 	public String toString() {
 		return "Beers [id=" + id + ", name=" + name + ", brewery=" + brewery + ", style=" + style + ", abv=" + abv
-				+ ", country=" + country + "]";
-	}
-	public Beers(int id, String name, String brewery, String style, double abv, String country) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.brewery = brewery;
-		this.style = style;
-		this.abv = abv;
-		this.country = country;
+				+ ", country=" + country + ", logoUrl=" + logoUrl + "]";
 	}
 	public Beers() {
 		super();

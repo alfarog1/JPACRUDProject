@@ -47,6 +47,7 @@ class BeersTest {
 		assertEquals("Pale lager", b.getStyle());
 		assertEquals(5.0, b.getAbv());
 		assertEquals("Netherlands", b.getCountry());
+		assertEquals("https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-original-577x577/s3/092011/heineken_06_0.png", b.getLogoUrl());
 	}
 
 }
