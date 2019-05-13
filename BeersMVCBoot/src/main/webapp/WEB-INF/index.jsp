@@ -60,7 +60,6 @@
 
 
 
-
 <div class="center">
 <!-- 
 	<form action="getBeersbyKey.do" method="GET">
@@ -76,6 +75,7 @@
 	</form>
 	 -->
 	<!-- <ul> -->
+	<div class="CTest" > 
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -127,8 +127,92 @@
   </div>
   </div>
   </div>
+  </div>
   
 	<!-- </ul> -->
+
+<%-- 
+
+ <div class="flex-container">
+    <div class="cards">
+      
+
+  	<c:forEach var="beer" items="${beerList }">
+		  <li class="flex-item">
+			<div class="front">
+				<div class="card text-center" style="width: 13rem;">
+  					<div class="card-body">
+   						 <h5 class="card-title"><a href="getBeers.do?bId=${beer.id }" class="btn btn-dark"> ${beer.name} </a></h5>
+    						<p class="card-text">
+    					
+    					<c:if test="${not empty beer.logoUrl  }">
+						<img src="${beer.logoUrl }" alt="Get a better url for the Beer Logo" style="width:75px;height:75px;">
+						</c:if>
+            </div>
+					<div class="card text-center" style="width: 13rem;">
+  					<div class="card-body">
+					   <div class="back">
+					   ABV: ${beer.abv } <br>
+					   Brewery: ${beer.brewery } <br>
+					   Country: ${beer.country } <br>
+           				 </div>
+            </div>
+            </div>
+            
+					</div>
+				</div>
+		
+		
+   </li>
+	</c:forEach>
+   
+</div>
+</div>
+<!-- </ul> -->
+
+ --%>
+
+ <div class="flex-container">
+
+  	<c:forEach var="beer" items="${beerList }">
+    <div class="cards">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    						<div class="card-text">
+    
+    
+    
+     	 <h5 <%-- class="card-title"><a href="getBeers.do?bId=${beer.id }" class="btn btn-dark" --%>> ${beer.name} <!-- </a> --></h5>
+    					
+    					<c:if test="${not empty beer.logoUrl  }">
+						<img src="${beer.logoUrl }" alt="Get a better url for the Beer Logo" style="width:75px;height:75px;">
+						</c:if>
+    <div class="flip-card-front">
+      
+      
+    </div>
+  		</div>
+    <div class="flip-card-back">
+    
+    
+    
+    
+      ABV: ${beer.abv } <br>
+					   Brewery: ${beer.brewery } <br>
+					   Country: ${beer.country } <br>
+					   <h5 class="card-title"><a href="getBeers.do?bId=${beer.id }" class="btn btn-dark"> ${beer.name} </a></h5>
+      
+    </div>
+  </div>
+</div>
+	</div>
+    </c:forEach>  
+      
+
+</div>
+
+
+
 
 
 

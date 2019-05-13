@@ -61,9 +61,6 @@
 </nav>
 
 
-
-
-
 <div>
 <c:if test="${not empty beer.logoUrl  }">
 			<img src="${beer.logoUrl }" alt="Add Beer Logo" style="width:75px;height:75px;">
