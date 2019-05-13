@@ -54,6 +54,7 @@ public class BeersJpaImpl implements BeersDAO {
 		em.persist(beer);
 		// update the "local" beer object
 		em.flush();
+		System.out.println(beer);
 		return beer;
 	}
 

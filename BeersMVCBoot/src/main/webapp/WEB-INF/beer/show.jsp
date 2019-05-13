@@ -65,7 +65,6 @@
 <c:if test="${not empty beer.logoUrl  }">
 			<img src="${beer.logoUrl }" alt="Add Beer Logo" style="width:75px;height:75px;">
 			</c:if>
-			<h1>${beer.id }</h1>
   <h1>${beer.name}  (${beer.style})</h1>
   <p><h2>ABV ${beer.abv}%</h2>
   <p><h3>Brewery: ${beer.brewery}</h3>
