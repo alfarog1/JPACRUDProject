@@ -37,10 +37,64 @@
 }
 
 
-.navbarTest{
-  position: center;
+nav{
+  position: sticky;
 }
 
+#carousel {
+  color: white;
+  overflow:hidden;
+  position:relative;
+  width:auto;
+  animation: showSlide 0.5s;
+}
+
+#carousel ul {
+  -moz-box-orient:horizontal;
+  -ms-box-orient:horizontal;
+  -webkit-box-orient:horizontal;
+  -o-box-orient:horizontal;
+  box-orient:horizontal;
+
+  display:-moz-box;
+  display:-ms-box;
+  display:-webkit-box;
+  display:-o-box;
+  display:box;
+
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+
+#carousel li {
+  color: white;
+  height:200px;
+  margin-right:10px;
+  width:200px;
+}
+.card_image img{
+  position: relative;
+}
+.item {
+    display: none;
+    position: relative;
+    .transition:0.3s ease-in-out left;
+}
+
+.carousel-inner > .item {
+    position: relative;
+    display: none;
+    -webkit-transition: 0.3s ease-in-out left;
+    -moz-transition: 0.3s ease-in-out left;
+    -o-transition: 0.3s ease-in-out left;
+    transition: 0.3s ease-in-out left;
+}
+
+
+.startimg{
+
+}
 .flex-container {
   flex-direction: row
   padding: 0;
@@ -164,7 +218,7 @@
 }
 .card-text{
 
-  color: black;
+  color: white;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -177,16 +231,29 @@
   backface-visibility: hidden;
 
 }
+.card-body{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* background: black; */
+  line-height: 300px;
+
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
 
-  /* color: black;
+  color: white;
   position: absolute;
   height: 100%;
   width: 100%;
   /* background: black; */
-  /*
+
   line-height: 300px;
 
   text-align: center;
@@ -194,7 +261,7 @@
   border-radius: 5px;
   backface-visibility: hidden;
 
-  */
+
 
   background-position: center -100px;
   -webkit-filter: blur(7px); */
@@ -216,11 +283,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-#test_logo{
-    background: url"https://raw.githubusercontent.com/alfarog1/SpringMVCFilmCRUD/master/WebContent/WEB-INF/lib/logo.png");
-    width : 35%;
-    height : 35%;
-}
+
 
 body {
 
@@ -233,14 +296,15 @@ body {
   text-align: left;
   /* background-color: #fff; */
 }
+
+
 .bg-image {
   /*
     background-image: url('https://github.com/alfarog1/JPACRUDProject/blob/master/BeersMVCBoot/src/main/webapp/WEB-INF/img/kyle-wagner-774334-unsplash.jpg');
 
-
   /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
 
   /* Full height */
   height: 100%;
@@ -250,8 +314,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
-  z-index: -30;
-   */
+  z-index: -2;
+
+
 }
 .bg-text {
   background-color: rgb(0,0,0); /* Fallback color */
@@ -268,22 +333,22 @@ body {
   padding: 20px;
   text-align: center;
 
-  background-image: url('https://github.com/alfarog1/JPACRUDProject/blob/master/BeersMVCBoot/src/main/webapp/WEB-INF/img/kyle-wagner-774334-unsplash.jpg');
+  background-image: url('https://images.unsplash.com/photo-1533922922960-9fceb9ef4733?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80');
 
 
 /* Add the blur effect */
-filter: blur(8px);
--webkit-filter: blur(8px);
+filter: blur(3px);
+-webkit-filter: blur(3px);
 
 /* Full height */
 height: 100%;
-
+width: 100%;
 /* Center and scale the image nicely */
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 
-z-index: -30;
+z-index: -2;
 }
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {

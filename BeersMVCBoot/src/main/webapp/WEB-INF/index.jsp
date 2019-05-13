@@ -44,108 +44,25 @@
 </nav>
 
 
-
-
-
-<div class="center">
-	<div class="CTest" > 
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  
-
-	
-		<div class="carousel-inner v-2" role="listbox">
-		<div class="carousel-item active">
-		<div class="card text-center" style="width: 13rem;">
-  					<div class="card-body">
-		
-		<img class="card-img-top" src="https://www.contegix.com/wp-content/uploads/2017/06/test.png" alt="First Slide">
-		
-		</div>
-		</div>
-		</div>
-		<c:forEach var="beer" items="${beerList }">
-			
-			<div class="carousel-item">
-		
-		 	
-				<div class="card text-center" style="width: 13rem;">
-  					<div class="card-body">
-   						 <h5 class="card-title"><a href="getBeers.do?bId=${beer.id }" class="btn btn-dark"> ${beer.name} </a></h5>
-    						<p class="card-text">
-    					
-    					<c:if test="${not empty beer.logoUrl  }">
-						<img src="${beer.logoUrl }" alt="Get a better url for the Beer Logo" style="width:75px;height:75px;">
-						</c:if>
-					</div>
-				</div>
-				
-				
-			</div>
-		
-		</c:forEach>
-			
-		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  </div>
-  </div>
-  </div>
-  </div>
-
-  
-	<!-- </ul> -->
-
-<%-- 
-
- <div class="flex-container">
-    <div class="cards">
-      
+<div id="carousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+  <h2> Have you tried this one?</h2>
+    
+    </div>
 
   	<c:forEach var="beer" items="${beerList }">
-		  <li class="flex-item">
-			<div class="front">
-				<div class="card text-center" style="width: 13rem;">
-  					<div class="card-body">
-   						 <h5 class="card-title"><a href="getBeers.do?bId=${beer.id }" class="btn btn-dark"> ${beer.name} </a></h5>
-    						<p class="card-text">
+<div class="carousel-item ">
+     	 <h4> ${beer.name} </h4>
     					
     					<c:if test="${not empty beer.logoUrl  }">
+    					<div class="card_image">
 						<img src="${beer.logoUrl }" alt="Get a better url for the Beer Logo" style="width:75px;height:75px;">
+						</div>
 						</c:if>
-            </div>
-					<div class="card text-center" style="width: 13rem;">
-  					<div class="card-body">
-					   <div class="back">
-					   ABV: ${beer.abv } <br>
-					   Brewery: ${beer.brewery } <br>
-					   Country: ${beer.country } <br>
-           				 </div>
-            </div>
-            </div>
-            
-					</div>
-				</div>
-		
-		
-   </li>
-	</c:forEach>
-   
-</div>
-</div>
-<!-- </ul> -->
-
- --%>
- 
+    </div>
+     </c:forEach>  
+  
  
  <div class="flex-container">
 
@@ -157,7 +74,7 @@
     
     
     
-     	 <h5 <%-- class="card-title"><a href="getBeers.do?bId=${beer.id }" class="btn btn-dark" --%>> ${beer.name} <!-- </a> --></h5>
+     	 <h4 <%-- class="card-title"><a href="getBeers.do?bId=${beer.id }" class="btn btn-dark" --%>> ${beer.name} <!-- </a> --></h4>
     					
     					<c:if test="${not empty beer.logoUrl  }">
 						<img src="${beer.logoUrl }" alt="Get a better url for the Beer Logo" style="width:75px;height:75px;">
