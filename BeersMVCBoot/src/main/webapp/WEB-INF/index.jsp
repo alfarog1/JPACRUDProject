@@ -20,7 +20,6 @@
 
 <body>
 
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="/">Find your beer...</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,19 +34,6 @@
       <li class="nav-item">
         <a class="nav-link" href="addBeerView.do">Add a beer</a>
       </li>
-   <!--    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Edit
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Add a beer</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Edit a beer</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Delete a beer</a>
-        </div>
-      </li> -->
-     
     </ul>
     <form action="getBeersbyKey.do" method="GET" class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" name="keyword" placeholder="Search" aria-label="Search">
@@ -60,21 +46,8 @@
 
 
 
+
 <div class="center">
-<!-- 
-	<form action="getBeersbyKey.do" method="GET">
-		Search: <input type="text" name="keyword" /> <input type="submit"
-			value="Show Beers" />
-	</form>
-			 -->
-<!-- 	<p>
-	<p>
-	<form action="addBeerView.do" method="GET">
-		<input type="submit"
-			value="Add a beer" />
-	</form>
-	 -->
-	<!-- <ul> -->
 	<div class="CTest" > 
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -128,6 +101,7 @@
   </div>
   </div>
   </div>
+
   
 	<!-- </ul> -->
 
@@ -171,7 +145,8 @@
 <!-- </ul> -->
 
  --%>
-
+ 
+ 
  <div class="flex-container">
 
   	<c:forEach var="beer" items="${beerList }">
@@ -210,11 +185,11 @@
       
 
 </div>
+</div>
 
 
-
-
-
+ <div class="bg-text">
+</div>
 
 
 	<script src="js/scripts.js"></script>

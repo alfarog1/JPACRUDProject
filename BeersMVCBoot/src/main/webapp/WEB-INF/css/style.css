@@ -223,6 +223,7 @@ html {
 }
 
 body {
+
   margin: 0;
   font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
@@ -230,9 +231,60 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
+.bg-image {
+  /*
+    background-image: url('https://github.com/alfarog1/JPACRUDProject/blob/master/BeersMVCBoot/src/main/webapp/WEB-INF/img/kyle-wagner-774334-unsplash.jpg');
 
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  z-index: -30;
+   */
+}
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+
+  background-image: url('https://github.com/alfarog1/JPACRUDProject/blob/master/BeersMVCBoot/src/main/webapp/WEB-INF/img/kyle-wagner-774334-unsplash.jpg');
+
+
+/* Add the blur effect */
+filter: blur(8px);
+-webkit-filter: blur(8px);
+
+/* Full height */
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+z-index: -30;
+}
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
@@ -302,21 +354,7 @@ small {
   font-size: 80%;
 }
 
-sub,
-sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline;
-}
 
-sub {
-  bottom: -.25em;
-}
-
-sup {
-  top: -.5em;
-}
 
 a {
   color: #333;
