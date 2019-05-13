@@ -88,8 +88,8 @@
     
     
     
-    
-      ABV: ${beer.abv } <br>
+    				   Style: ${beer.style }
+     				   ABV: ${beer.abv } <br>
 					   Brewery: ${beer.brewery } <br>
 					   Country: ${beer.country } <br>
 					   <h5 class="card-title"><a href="getBeers.do?bId=${beer.id }" class="btn btn-dark"> ${beer.name} </a></h5>
