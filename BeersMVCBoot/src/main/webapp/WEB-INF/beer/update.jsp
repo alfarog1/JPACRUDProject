@@ -100,10 +100,9 @@
             </tr> --%>
             
              <td> <form:label path = "country">Country</form:label><span style="color: red !important; display: inline; float: none;"><!-- * --></span>      
-        
             <select id="country" name="country" class="form-control">
+            	<option value="${beers.country }">${beers.country }</option>
             	<option value="United States of America">United States of America</option>
-            
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
